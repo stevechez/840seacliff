@@ -9,7 +9,6 @@ import {
 import Image from 'next/image';
 
 const images = [
-	'/images/840seacliff.jpg',
 	'/images/fronthouse.jpg',
 	'/images/foyer.jpg',
 	'/images/foyer2.jpg',
@@ -39,14 +38,14 @@ const images = [
 
 export function ImageGallery() {
 	return (
-		<section className="py-16 sm:py-24">
+		<section id="gallery" className="py-4 sm:py-8">
 			<div className="container mx-auto px-4">
 				<div className="text-center mb-12">
 					<h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-						Visual Journey
+						Step Inside Your Coastal Dream
 					</h2>
 					<p className="mt-4 text-lg text-muted-foreground">
-						Explore every corner of your future home.
+						Every room, every detail – see yourself at home in Seacliff.{' '}
 					</p>
 				</div>
 				<Carousel className="w-full" opts={{ loop: true }}>

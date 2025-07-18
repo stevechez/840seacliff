@@ -4,16 +4,17 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+// We only need the Menu icon from lucide-react now
 import { Menu } from 'lucide-react';
 
 interface NavbarProps {
 	propertyAddress: string;
 }
 
+// Update your nav links to match the desired text
 const navLinks = [
-	{ href: '#details', label: 'Details' },
-	{ href: '#gallery', label: 'Gallery' },
-	{ href: '#contact', label: 'Contact' },
+	{ href: '#gallery', label: 'GALLERY' },
+	{ href: '#contact', label: 'SCHEDULE VIEWING' },
 ];
 
 export function Navbar({ propertyAddress }: NavbarProps) {
@@ -22,20 +23,17 @@ export function Navbar({ propertyAddress }: NavbarProps) {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			// Set to true if scrolled more than 10px, for example
 			setIsScrolled(window.scrollY > 10);
 		};
-
-		// Add event listener
 		window.addEventListener('scroll', handleScroll);
-
-		// Clean up event listener on component unmount
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
 
 	const closeMobileMenu = () => setIsMobileMenuOpen(false);
+
+	const navTextColor = isScrolled ? 'text-foreground' : 'text-white';
 
 	return (
 		<header
@@ -45,81 +43,95 @@ export function Navbar({ propertyAddress }: NavbarProps) {
 					: 'bg-transparent'
 			}`}
 		>
-			<div className="container mx-auto flex h-20 items-center justify-between px-4">
-				{/* Logo / Property Address */}
-				<Link href="/" className="flex items-center">
-					<span
-						className={`font-bold text-lg transition-colors ${
-							isScrolled ? 'text-foreground' : 'text-white'
-						}`}
-					>
-						{propertyAddress}
-					</span>
-				</Link>
+			<div className="container mx-auto flex h-20 items-center justify-between px-4 relative">
+				{/* --- LEFT SIDE: Desktop Menu Trigger (NOW WITH HAMBURGER ICON) --- */}
+				<div className="hidden md:flex">
+					<Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+						<SheetTrigger asChild>
+							<button
+								className={`flex items-center gap-2.5 group ${navTextColor}`}
+							>
+								{/* REPLACED HexagonIcon with the Menu icon */}
+								<Menu className="h-5 w-5" />
+								<span className="text-sm font-light uppercase tracking-widest">
+									Menu
+								</span>
+							</button>
+						</SheetTrigger>
+						{/* The SheetContent is the same for both mobile and desktop triggers */}
+						<SheetContent side="left" className="w-full sm:w-[320px]">
+							<div className="flex flex-col h-full p-6">
+								<div className="mb-12">
+									{/* You can put a logo or title here */}
+									<span className="text-xl font-semibold">
+										Coastal Living Awaits
+									</span>
+								</div>
+								<nav className="flex flex-col gap-6">
+									<Link
+										href="#"
+										onClick={closeMobileMenu}
+										className="text-xl font-light uppercase tracking-widest text-foreground transition-colors hover:text-primary"
+									>
+										Home
+									</Link>
+									{/* Map over main links */}
+									{navLinks.map(link => (
+										<Link
+											key={link.href}
+											href={link.href}
+											onClick={closeMobileMenu}
+											className="text-xl font-light uppercase tracking-widest text-foreground transition-colors hover:text-primary"
+										>
+											{link.label}
+										</Link>
+									))}
+									<Link
+										href="#details"
+										onClick={closeMobileMenu}
+										className="text-xl font-light uppercase tracking-widest text-foreground transition-colors hover:text-primary"
+									>
+										Details
+									</Link>
+								</nav>
+							</div>
+						</SheetContent>
+					</Sheet>
+				</div>
 
-				{/* Desktop Navigation */}
-				<nav className="hidden md:flex items-center gap-6">
+				{/* --- CENTER: Property Name (Logo) --- */}
+				<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+					<Link
+						href="/"
+						className={`${navTextColor} text-lg font-light uppercase tracking-widest transition-colors hover:text-primary`}
+					>
+						<span className="hidden sm:inline">The Seacliff Estate</span>
+						<span className="sm:hidden">{propertyAddress}</span>
+					</Link>
+				</div>
+
+				{/* --- RIGHT SIDE: Desktop Navigation Links --- */}
+				<nav className="hidden md:flex items-center gap-8">
 					{navLinks.map(link => (
 						<Link
 							key={link.href}
 							href={link.href}
-							className={`text-sm font-medium transition-colors hover:text-primary ${
-								isScrolled ? 'text-foreground' : 'text-white/90'
-							}`}
+							className={`text-sm font-light uppercase tracking-widest transition-colors hover:text-primary ${navTextColor}`}
 						>
 							{link.label}
 						</Link>
 					))}
 				</nav>
 
-				{/* CTA Button - Desktop */}
-				<div className="hidden md:block">
-					<Button asChild>
-						<Link href="#contact">Schedule a Tour</Link>
-					</Button>
-				</div>
-
-				{/* Mobile Menu Trigger */}
+				{/* --- Mobile Menu Trigger (Hamburger) --- */}
 				<div className="md:hidden">
 					<Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
 						<SheetTrigger asChild>
 							<Button variant="ghost" size="icon">
-								<Menu
-									className={`h-6 w-6 transition-colors ${
-										isScrolled ? 'text-foreground' : 'text-white'
-									}`}
-								/>
+								<Menu className={`h-6 w-6 ${navTextColor}`} />
 								<span className="sr-only">Toggle menu</span>
 							</Button>
 						</SheetTrigger>
-						<SheetContent side="right" className="w-full sm:w-[320px]">
-							<div className="flex flex-col h-full p-4">
-								<Link href="/" onClick={closeMobileMenu} className="mb-8">
-									<span className="font-bold text-lg text-foreground">
-										{propertyAddress}
-									</span>
-								</Link>
-								<nav className="flex flex-col gap-6">
-									{navLinks.map(link => (
-										<Link
-											key={link.href}
-											href={link.href}
-											onClick={closeMobileMenu}
-											className="text-lg font-medium text-foreground transition-colors hover:text-primary"
-										>
-											{link.label}
-										</Link>
-									))}
-								</nav>
-								<div className="mt-auto">
-									<Button asChild className="w-full">
-										<Link href="#contact" onClick={closeMobileMenu}>
-											Schedule a Tour
-										</Link>
-									</Button>
-								</div>
-							</div>
-						</SheetContent>
 					</Sheet>
 				</div>
 			</div>

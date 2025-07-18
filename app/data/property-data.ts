@@ -30,27 +30,24 @@ export const propertyData = {
 	highlights: [
 		{
 			icon: BedDouble,
-			title: '5 Bedrooms',
+			title: '3 Bedrooms',
 			description:
 				'Spacious and serene, each with ensuite bathrooms and walk-in closets.',
 		},
 		{
 			icon: Bath,
-			title: '7 Bathrooms',
-			description:
-				'Featuring modern fixtures, Italian marble, and a spa-like master bath.',
+			title: '2.5 Bathrooms',
+			description: 'Featuring modern fixtures and a spa-like master bath.',
 		},
 		{
 			icon: Square,
-			title: '6,200 Sq. Ft.',
-			description:
-				'Expansive open-plan living and entertaining spaces with soaring ceilings.',
+			title: '2,241 Sq. Ft.',
+			description: 'Expansive open-plan living.',
 		},
 		{
 			icon: ChefHat,
-			title: 'Gourmet Kitchen',
-			description:
-				'Equipped with top-of-the-line appliances and a grand center island.',
+			title: 'Updated Kitchen',
+			description: 'New appliances and quartz countertops.',
 		},
 	],
 
@@ -88,8 +85,8 @@ export const propertyData = {
 	// --- Agent & Contact Section ---
 	// Information for the agent, used in the CTA and Footer.
 	agent: {
-		name: 'Jane Doe',
-		title: 'Lead Listing Agent, Prestige Realty',
+		name: 'Steve Chez',
+		title: 'Listing Agent, SM Realty',
 		photoSrc: '/agent-photo.jpg',
 		dre: 'DRE #01234567',
 	},
@@ -97,9 +94,9 @@ export const propertyData = {
 	// --- SEO & Metadata ---
 	// This data is used for the page title, description, and social media sharing cards.
 	meta: {
-		title: 'Luxury Estate for Sale | 123 Luxury Lane, Beverly Hills',
+		title: 'Aptos beach house | 840 Seacliff Drive, Aptos',
 		description:
-			'Explore an architectural masterpiece offering 5 beds, 7 baths, and breathtaking canyon views. Schedule your private tour today.',
+			'Live the Seacliff lifestyle! Find your dream home for sale on a quiet cul-de-sac, close to beaches. Enjoy updated comforts & private outdoor space. ',
 		ogImage: '/property-images/og-image.jpg', // A specific, stunning image for social sharing (1200x630px recommended)
 	},
 } as const; // Using 'as const' makes this object readonly and provides stricter types.

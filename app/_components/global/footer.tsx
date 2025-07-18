@@ -1,60 +1,29 @@
 import { Button } from '@/components/ui/button';
-// import { Separator } from '@/components/ui/separator';
-// import { Separator } from '../../components/ui/separator';
+import { Separator } from '@/components/ui/separator';
 import { Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
-import Link from 'next/link';
 
 export function Footer() {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<footer className="bg-background border-t">
-			<div className="container mx-auto px-4 py-8">
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-					{/* Branding/Agent Info */}
-					<div>
-						<h3 className="font-bold text-lg">Prestige Realty</h3>
-						<p className="text-sm text-muted-foreground">
-							Representing California&quot;s Finest Properties
+		<footer className="bg-background border-t px-6">
+			<div className="container mx-auto px-4 py-12 sm:py-16">
+				{/* Main Flex Container */}
+				<div className="flex flex-col md:flex-row md:justify-between gap-10">
+					{/* LEFT SIDE: Branding and Info */}
+					<div className="text-center md:text-left">
+						<h3 className="font-bold text-lg">Chez Realty</h3>
+						<p className="mt-2 text-sm text-muted-foreground max-w-md">
+							Ready to explore your potential new home? We invite you to
+							schedule a private and personalized viewing at your convenience.
 						</p>
-						<p className="text-sm text-muted-foreground mt-2">DRE #01234567</p>
+						<p className="text-sm text-muted-foreground mt-4">DRE #01234567</p>
 					</div>
 
-					{/* Quick Links */}
-					<div>
-						<h4 className="font-semibold">Quick Links</h4>
-						<ul className="mt-2 space-y-1">
-							<li>
-								<Link
-									href="#details"
-									className="text-sm text-muted-foreground hover:text-primary"
-								>
-									Property Details
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="#gallery"
-									className="text-sm text-muted-foreground hover:text-primary"
-								>
-									Image Gallery
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="#contact"
-									className="text-sm text-muted-foreground hover:text-primary"
-								>
-									Schedule Tour
-								</Link>
-							</li>
-						</ul>
-					</div>
-
-					{/* Social Media */}
-					<div>
-						<h4 className="font-semibold">Follow Us</h4>
-						<div className="flex justify-center md:justify-start gap-2 mt-2">
+					{/* RIGHT SIDE: Social Media */}
+					<div className="text-center md:text-right mt-16 md:mt-0">
+						<h4 className="font-semibold mb-2">Follow Us</h4>
+						<div className="flex justify-center md:justify-end gap-2">
 							<Button variant="ghost" size="icon" asChild>
 								<a href="#" aria-label="Facebook">
 									<Facebook className="h-5 w-5" />
@@ -79,13 +48,12 @@ export function Footer() {
 					</div>
 				</div>
 
-				{/* <Separator className="my-8" /> */}
-
+				{/* Separator and Copyright remain the same */}
+				<Separator className="my-8" />
 				<div className="text-center text-sm text-muted-foreground">
-					<p>© {currentYear} Prestige Realty. All Rights Reserved.</p>
+					<p>© {currentYear} Chez Realty. All Rights Reserved.</p>
 					<p className="mt-1">
-						Site designed and developed for demonstration purposes. All media is
-						for placement only.
+						Site designed and developed for demonstration purposes.
 					</p>
 				</div>
 			</div>

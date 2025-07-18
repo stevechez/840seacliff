@@ -45,8 +45,8 @@ export function Hero({ fallbackImageSrc, address, price }: HeroProps) {
 		<div className="relative h-screen w-full overflow-hidden">
 			{/* Background Image using next/image for optimization */}
 			<Image
-				src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2671&auto=format&fit=crop"
-				alt="View of the luxury property"
+				src="/images/840seacliff.jpg"
+				alt="840 Seacliff Drive"
 				fill
 				className="object-cover"
 				priority
@@ -69,15 +69,15 @@ export function Hero({ fallbackImageSrc, address, price }: HeroProps) {
 						className="flex items-center gap-2 mb-2"
 					>
 						<MapPin className="h-5 w-5 text-white/80" />
-						<p className="text-base font-medium text-white/80">{address}</p>
+						<p className="font-medium text-2xl text-white/80">{address}</p>
 					</motion.div>
 
 					{/* Main Title / Tagline */}
 					<motion.h1
 						variants={itemVariants} // This will now be type-safe
-						className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-shadow-lg"
+						className="text-4xl md:text-4xl lg:text-7xl font-bold tracking-tight text-shadow-lg"
 					>
-						An Architectural Masterpiece
+						Coastal Charm Meets Quiet Comfort
 					</motion.h1>
 
 					{/* Price */}
@@ -105,6 +105,18 @@ export function Hero({ fallbackImageSrc, address, price }: HeroProps) {
 						</Button>
 					</motion.div>
 				</motion.div>
+			</div>
+
+			{/* --- MODIFIED GRADIENT OVERLAY --- */}
+			{/* We add a gradient from the top down to darken the area behind the navbar */}
+			<div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent" />
+
+			{/* We keep the original gradient from the bottom up for the text at the bottom */}
+			<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+			{/* Content Container is unchanged */}
+			<div className="relative z-10 flex flex-col h-full items-start justify-end p-8 sm:p-12 lg:p-24">
+				{/* ... (all the motion.div content remains the same) */}
 			</div>
 
 			{/* Animated Scroll Down Hint */}

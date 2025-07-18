@@ -1,32 +1,31 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Inter } from 'next/font/google'; // Or your chosen font
+import { Toaster } from '@/components/ui/sonner'; // Assuming you use Sonner for notifications
 import './globals.css';
+
+// Import your central data source for SEO
+import { propertyData } from './data/property-data';
+// Import the component that renders the JSON-LD script
 import { PropertyJsonLd } from './_components/global/json-ld';
 
-const geistSans = Geist({
-	variable: '--font-geist-sans',
-	subsets: ['latin'],
-});
+const inter = Inter({ subsets: ['latin'] });
 
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
-	subsets: ['latin'],
-});
-
+// --- DYNAMIC METADATA ---
+// This generates the page title, description, and social media card
+// using the data from your single source of truth.
 export const metadata: Metadata = {
-	title: 'Luxury Estate for Sale | 123 Luxury Lane, Beverly Hills, CA',
-	description:
-		'Explore the architectural masterpiece at 123 Luxury Lane. A modern estate with 5 beds, 7 baths, and breathtaking canyon views.',
+	title: propertyData.meta.title,
+	description: propertyData.meta.description,
 	openGraph: {
-		title: 'Luxury Estate for Sale | 123 Luxury Lane, Beverly Hills, CA',
-		description:
-			'A modern estate with 5 beds, 7 baths, and breathtaking canyon views.',
+		title: propertyData.meta.title,
+		description: propertyData.meta.description,
 		images: [
 			{
-				url: 'https://www.yourdomain.com/property-images/og-image.jpg', // A stunning hero shot
+				// Remember to use an absolute URL for Open Graph images
+				url: `https://840seacliff.vercel.app${propertyData.meta.ogImage}`,
 				width: 1200,
 				height: 630,
-				alt: 'Exterior view of the luxury estate at 123 Luxury Lane',
+				alt: 'Stunning exterior view of the luxury property',
 			},
 		],
 		type: 'website',
@@ -40,11 +39,22 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<PropertyJsonLd />
+			{/* 
+        This is the correct placement. The <head> tag contains metadata
+        and scripts that are not visible on the page. Next.js will
+        automatically merge the content from the 'metadata' object
+        with any elements you manually place here.
+      */}
+			<head>
+				<PropertyJsonLd />
+			</head>
+
+			{/* The <body> contains the visible content of your page */}
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				className={`${inter.className} bg-background text-foreground antialiased`}
 			>
 				{children}
+				<Toaster /> {/* Place your notification Toaster here */}
 			</body>
 		</html>
 	);

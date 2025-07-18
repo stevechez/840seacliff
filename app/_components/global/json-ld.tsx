@@ -25,7 +25,7 @@ export function PropertyJsonLd() {
 			price: '1499000',
 			priceCurrency: 'USD',
 			availability: 'https://schema.org/InStock',
-			url: 'https://www.yourdomain.com/',
+			url: 'https://840seacliff.vercel.com/',
 		},
 	};
 
