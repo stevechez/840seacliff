@@ -24,7 +24,8 @@ const propertyData = {
 			sqft: '2144',
 		},
 	},
-	fallbackImageSrc: '/images/840seacliff.jpg', // <--- ADD THIS LINE with your actual path
+	fallbackImageSrc: '/images/840seacliff.jpg',
+	videoSrc: 'https://youtu.be/UThBbhd_Elw',
 };
 
 export default function HomePage() {
@@ -40,6 +41,7 @@ export default function HomePage() {
 				fallbackImageSrc={propertyData.fallbackImageSrc} // <--- ADD THIS LINE
 				// If you still have videoSrc, make sure it's also here and in HeroProps
 				// videoSrc={propertyData.videoSrc}
+				videoSrc={'https://youtu.be/UThBbhd_Elw'}
 			/>
 			<PropertyHighlights />
 

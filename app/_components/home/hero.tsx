@@ -10,6 +10,7 @@ interface HeroProps {
 	address: string;
 	price: string;
 	fallbackImageSrc: string;
+	videoSrc?: string; // Optional if you want to keep the video functionality
 }
 
 // --- CHANGES START HERE ---
