@@ -24,7 +24,7 @@ const propertyData = {
 			sqft: '2144',
 		},
 	},
-	// Add more details, images, etc.
+	fallbackImageSrc: '/images/840seacliff.jpg', // <--- ADD THIS LINE with your actual path
 };
 
 export default function HomePage() {
@@ -34,8 +34,13 @@ export default function HomePage() {
 
 			<Navbar propertyAddress={propertyData.address} />
 
-			<Hero address={propertyData.address} price={propertyData.price} />
-
+			<Hero
+				address={propertyData.address}
+				price={propertyData.price}
+				fallbackImageSrc={propertyData.fallbackImageSrc} // <--- ADD THIS LINE
+				// If you still have videoSrc, make sure it's also here and in HeroProps
+				// videoSrc={propertyData.videoSrc}
+			/>
 			<PropertyHighlights />
 
 			<ImageGallery />

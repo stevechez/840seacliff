@@ -9,6 +9,7 @@ import { motion, Variants } from 'framer-motion';
 interface HeroProps {
 	address: string;
 	price: string;
+	fallbackImageSrc: string;
 }
 
 // --- CHANGES START HERE ---
@@ -39,7 +40,7 @@ const itemVariants: Variants = {
 
 // --- CHANGES END HERE ---
 
-export function Hero({ address, price }: HeroProps) {
+export function Hero({ address, price, fallbackImageSrc }: HeroProps) {
 	return (
 		<div className="relative h-screen w-full overflow-hidden">
 			{/* Background Image using next/image for optimization */}
@@ -105,6 +106,8 @@ export function Hero({ address, price }: HeroProps) {
 					</motion.div>
 				</motion.div>
 			</div>
+
+			<div>{/* ... rest of your Hero component */}</div>
 
 			{/* --- MODIFIED GRADIENT OVERLAY --- */}
 			{/* We add a gradient from the top down to darken the area behind the navbar */}
