@@ -46,6 +46,8 @@ export function Hero({
 	imageSrc = '/fallback-image.jpg',
 	address,
 	price,
+	videoSrc,
+	fallbackImageSrc,
 }: HeroProps) {
 	return (
 		<div className="relative h-screen w-full overflow-hidden">
