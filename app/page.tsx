@@ -41,7 +41,7 @@ export default function HomePage() {
 				fallbackImageSrc={propertyData.fallbackImageSrc} // <--- ADD THIS LINE
 				// If you still have videoSrc, make sure it's also here and in HeroProps
 				// videoSrc={propertyData.videoSrc}
-				videoSrc={'https://youtu.be/UThBbhd_Elw'}
+				videoSrc={propertyData.videoSrc}
 			/>
 			<PropertyHighlights />
 
