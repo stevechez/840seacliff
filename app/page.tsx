@@ -39,7 +39,6 @@ export default function HomePage() {
 				// fallbackImageSrc={propertyData.hero.fallbackImageSrc}
 				address={propertyData.address}
 				price={propertyData.price}
-				fallbackImageSrc={''}
 			/>
 
 			<PropertyHighlights />

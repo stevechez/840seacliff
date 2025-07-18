@@ -7,7 +7,6 @@ import { ArrowDown, MapPin } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 
 interface HeroProps {
-	fallbackImageSrc: string;
 	address: string;
 	price: string;
 }
@@ -40,7 +39,7 @@ const itemVariants: Variants = {
 
 // --- CHANGES END HERE ---
 
-export function Hero({ fallbackImageSrc, address, price }: HeroProps) {
+export function Hero({ address, price }: HeroProps) {
 	return (
 		<div className="relative h-screen w-full overflow-hidden">
 			{/* Background Image using next/image for optimization */}
