@@ -9,8 +9,9 @@ import { motion, Variants } from 'framer-motion';
 interface HeroProps {
 	address: string;
 	price: string;
-	fallbackImageSrc: string;
-	videoSrc?: string; // Optional if you want to keep the video functionality
+	fallbackImageSrc?: string;
+	videoSrc?: string;
+	imageSrc?: string; // Optional prop for the background image
 }
 
 // --- CHANGES START HERE ---
@@ -41,74 +42,21 @@ const itemVariants: Variants = {
 
 // --- CHANGES END HERE ---
 
-export function Hero({ address, price, fallbackImageSrc }: HeroProps) {
+export function Hero({
+	imageSrc = '/fallback-image.jpg',
+	address,
+	price,
+}: HeroProps) {
 	return (
 		<div className="relative h-screen w-full overflow-hidden">
-			{/* Background Image using next/image for optimization */}
+			{/* Background Image using the 'imageSrc' prop */}
 			<Image
-				src="/images/840seacliff.jpg"
-				alt="840 Seacliff Drive"
+				src={imageSrc ?? '/fallback-image.jpg'} // Use fallback if imageSrc is undefined
+				alt="View of the luxury property"
 				fill
 				className="object-cover"
 				priority
 			/>
-
-			{/* Sophisticated Gradient Overlay */}
-			<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-
-			{/* Content Container */}
-			<div className="relative z-10 flex flex-col h-full items-start justify-end p-8 sm:p-12 lg:p-24">
-				<motion.div
-					className="max-w-3xl text-white"
-					variants={containerVariants} // This will now be type-safe
-					initial="hidden"
-					animate="visible"
-				>
-					{/* Address with Icon */}
-					<motion.div
-						variants={itemVariants}
-						className="flex items-center gap-2 mb-2"
-					>
-						<MapPin className="h-5 w-5 text-white/80" />
-						<p className="font-medium text-2xl text-white/80">{address}</p>
-					</motion.div>
-
-					{/* Main Title / Tagline */}
-					<motion.h1
-						variants={itemVariants} // This will now be type-safe
-						className="text-4xl md:text-4xl lg:text-7xl font-bold tracking-tight text-shadow-lg"
-					>
-						Coastal Charm Meets Quiet Comfort
-					</motion.h1>
-
-					{/* Price */}
-					<motion.p
-						variants={itemVariants} // This will now be type-safe
-						className="mt-4 text-2xl md:text-4xl font-light text-shadow"
-					>
-						Offered at {price}
-					</motion.p>
-
-					{/* Buttons */}
-					<motion.div
-						variants={itemVariants}
-						className="mt-8 flex flex-wrap gap-4"
-					>
-						<Button size="lg" asChild>
-							<a href="#contact">Schedule a Tour</a>
-						</Button>
-						<Button
-							size="lg"
-							variant="outline"
-							className="bg-transparent text-white border-white hover:bg-white hover:text-black"
-						>
-							View Gallery
-						</Button>
-					</motion.div>
-				</motion.div>
-			</div>
-
-			<div>{/* ... rest of your Hero component */}</div>
 
 			{/* --- MODIFIED GRADIENT OVERLAY --- */}
 			{/* We add a gradient from the top down to darken the area behind the navbar */}
