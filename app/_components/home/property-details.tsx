@@ -3,7 +3,7 @@ import { Separator } from '@/components/ui/separator';
 // This data would likely be part of your main propertyData object
 const details = {
 	description: `Offering the best of both worlds, this Seacliff retreat is tucked
-away on a quiet cul-de-sac, just a short stroll from one of the neighborhoods most scenic beach paths. It"s close enough to hear the ocean, yet far enough to forget the crowds. Inside, a spacious open layout and generously sized bedrooms create an effortless sense of comfort, while thoughtful, intentional updates throughout the kitchen and bathrooms bring a polished, cohesive feel. A reimagined front yard sets the tone, and out back, a private patio offers a peaceful space to relax, unwind, or entertain. This home offers the ideal lifestyle, whether you're looking for a family home or a weekend beach getaway.`,
+away on a quiet cul-de-sac, just a short stroll from one of the neighborhoods most scenic beach paths. It's close enough to hear the ocean, yet far enough to forget the crowds. Inside, a spacious open layout and generously sized bedrooms create an effortless sense of comfort, while thoughtful, intentional updates throughout the kitchen and bathrooms bring a polished, cohesive feel. A reimagined front yard sets the tone, and out back, a private patio offers a peaceful space to relax, unwind, or entertain. This home offers the ideal lifestyle, whether you're looking for a family home or a weekend beach getaway.`,
 	specs: [
 		{ label: 'Bedrooms', value: '3' },
 		{ label: 'Bathrooms', value: '2.5' },

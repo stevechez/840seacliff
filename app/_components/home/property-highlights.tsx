@@ -33,7 +33,7 @@ export function PropertyHighlights() {
 						The Seacliff Sweet Spot
 					</h2>
 					<p className="mt-4 text-lg text-muted-foreground">
-						Where Ocean Whispers Meet Tranquil Livin
+						Where Ocean Whispers Meet Tranquil Living.
 					</p>
 				</div>
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">

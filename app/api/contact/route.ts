@@ -1,8 +1,7 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 
-// We're using Nodemailer as an example. You'd need to install it.
-// import nodemailer from 'nodemailer';
+import nodemailer from 'nodemailer';
 
 const contactSchema = z.object({
 	name: z.string().min(2, 'Name must be at least 2 characters.'),

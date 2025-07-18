@@ -48,22 +48,21 @@ export function ImageGallery() {
 						Every room, every detail – see yourself at home in Seacliff.{' '}
 					</p>
 				</div>
+
 				<Carousel className="w-full" opts={{ loop: true }}>
 					<CarouselContent>
 						{images.map((src, index) => (
 							<CarouselItem key={index}>
 								<div className="p-1">
-									<Card>
-										<CardContent className="flex aspect-[16/9] items-center justify-center p-0 overflow-hidden rounded-lg">
-											<Image
-												src={src}
-												alt={`Property Image ${index + 1}`}
-												width={1280}
-												height={720}
-												className="w-full h-full object-cover"
-											/>
-										</CardContent>
-									</Card>
+									<CardContent className="flex aspect-[16/9] items-center justify-center p-0 overflow-hidden rounded-lg">
+										<Image
+											src={src}
+											alt={`Property Image ${index + 1}`}
+											width={1280}
+											height={720}
+											className="w-full h-full object-cover"
+										/>
+									</CardContent>
 								</div>
 							</CarouselItem>
 						))}

@@ -1,6 +1,7 @@
 import { Navbar } from '@/app/_components/global/navbar';
 import { Hero } from '@/app/_components/home/hero';
 import { PropertyHighlights } from '@/app/_components/home/property-highlights';
+import { VideoSection } from '@/app/_components/home/video-section';
 import { ImageGallery } from '@/app/_components/home/image-gallery';
 import { PropertyDetails } from '@/app/_components/home/property-details';
 import { CtaSection } from '@/app/_components/home/cta-section';
@@ -32,9 +33,7 @@ export default function HomePage() {
 	return (
 		<main className="bg-background text-foreground">
 			{/* Each component receives the data it needs from our central object */}
-
 			<Navbar propertyAddress={propertyData.address} />
-
 			<Hero
 				// The Hero component now accepts ONE prop for the image, called 'imageSrc'.
 				imageSrc={propertyData.fallbackImageSrc}
@@ -43,14 +42,12 @@ export default function HomePage() {
 				price={propertyData.price}
 			/>
 			<PropertyHighlights />
-
 			<ImageGallery />
-
+			<VideoSection />
 			<PropertyDetails
 			// description={propertyData.details.description}
 			// specs={propertyData.details.specs}
 			/>
-
 			{/* 
         The CtaSection and Footer can also be refactored to accept agent data, 
         or they can import the data directly if they are very specific.
@@ -58,7 +55,6 @@ export default function HomePage() {
         but passing props is the more reusable pattern.
       */}
 			<CtaSection />
-
 			<Footer />
 		</main>
 	);
