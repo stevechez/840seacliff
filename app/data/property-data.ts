@@ -1,14 +1,5 @@
 import { BedDouble, Bath, Square, ChefHat } from 'lucide-react';
 
-/**
- * =================================================================================
- * SINGLE SOURCE OF TRUTH
- * =================================================================================
- * All content, text, and data for the property is managed from this file.
- * This makes updating the website for a new property a matter of changing
- * the values in this object.
- */
-
 export const propertyData = {
 	// --- Basic Info ---
 	address: '840 Seacliff Drive, Aptos, CA 95003',
@@ -21,9 +12,6 @@ export const propertyData = {
 	hero: {
 		videoSrc: 'https://youtu.be/UThBbhd_Elw',
 	},
-
-	// --- Property Highlights Section ---
-	// The four main selling points featured below the hero.
 	highlights: [
 		{
 			icon: BedDouble,
