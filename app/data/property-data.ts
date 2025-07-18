@@ -12,16 +12,16 @@ import { BedDouble, Bath, Square, ChefHat } from 'lucide-react';
 
 export const propertyData = {
 	// --- Basic Info ---
-	address: '123 Luxury Lane, Beverly Hills, CA 90210',
-	price: '$12,500,000',
-	bedrooms: 5,
-	bathrooms: 7,
-	sqft: 6200,
+	address: '840 Seacliff Drive, Aptos, CA 95003',
+	price: '$1,499,000',
+	bedrooms: 3,
+	bathrooms: 3,
+	sqft: 2241,
 
 	// --- Hero Section ---
 	// The main video and fallback image for the top of the page.
 	hero: {
-		videoSrc: '/videos/hero-video.mp4',
+		videoSrc: 'https://youtu.be/UThBbhd_Elw',
 		fallbackImageSrc: '/property-images/main-exterior.jpg',
 	},
 
