@@ -34,12 +34,7 @@ export default function HomePage() {
 
 			<Navbar propertyAddress={propertyData.address} />
 
-			<Hero
-				// videoSrc={propertyData.hero.videoSrc}
-				// fallbackImageSrc={propertyData.hero.fallbackImageSrc}
-				address={propertyData.address}
-				price={propertyData.price}
-			/>
+			<Hero address={propertyData.address} price={propertyData.price} />
 
 			<PropertyHighlights />
 

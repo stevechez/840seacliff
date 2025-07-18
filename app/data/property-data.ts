@@ -1,4 +1,3 @@
-import { ReactElement } from 'react';
 import { BedDouble, Bath, Square, ChefHat } from 'lucide-react';
 
 /**
@@ -19,10 +18,8 @@ export const propertyData = {
 	sqft: 2241,
 
 	// --- Hero Section ---
-	// The main video and fallback image for the top of the page.
 	hero: {
 		videoSrc: 'https://youtu.be/UThBbhd_Elw',
-		fallbackImageSrc: '/property-images/main-exterior.jpg',
 	},
 
 	// --- Property Highlights Section ---
