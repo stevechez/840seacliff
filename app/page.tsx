@@ -36,12 +36,11 @@ export default function HomePage() {
 			<Navbar propertyAddress={propertyData.address} />
 
 			<Hero
+				// The Hero component now accepts ONE prop for the image, called 'imageSrc'.
+				imageSrc={propertyData.fallbackImageSrc}
+				// These props are correct and should remain.
 				address={propertyData.address}
 				price={propertyData.price}
-				fallbackImageSrc={propertyData.fallbackImageSrc} // <--- ADD THIS LINE
-				// If you still have videoSrc, make sure it's also here and in HeroProps
-				// videoSrc={propertyData.videoSrc}
-				videoSrc={propertyData.videoSrc}
 			/>
 			<PropertyHighlights />
 

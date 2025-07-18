@@ -7,11 +7,9 @@ import { ArrowDown, MapPin } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 
 interface HeroProps {
+	imageSrc: string; // The ONLY image-related prop it needs
 	address: string;
 	price: string;
-	fallbackImageSrc?: string;
-	videoSrc?: string;
-	imageSrc?: string; // Optional prop for the background image
 }
 
 // --- CHANGES START HERE ---
@@ -46,8 +44,6 @@ export function Hero({
 	imageSrc = '/fallback-image.jpg',
 	address,
 	price,
-	videoSrc,
-	fallbackImageSrc,
 }: HeroProps) {
 	return (
 		<div className="relative h-screen w-full overflow-hidden">
