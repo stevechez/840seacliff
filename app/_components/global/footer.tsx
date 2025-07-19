@@ -52,9 +52,6 @@ export function Footer() {
 				<Separator className="my-8" />
 				<div className="text-center text-sm text-muted-foreground">
 					<p>© {currentYear} Chez Realty. All Rights Reserved.</p>
-					<p className="mt-1">
-						Site designed and developed for demonstration purposes.
-					</p>
 				</div>
 			</div>
 		</footer>

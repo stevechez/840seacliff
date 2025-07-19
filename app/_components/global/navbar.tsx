@@ -3,7 +3,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import {
+	Sheet,
+	SheetContent,
+	SheetHeader,
+	SheetTitle,
+	SheetTrigger,
+} from '@/components/ui/sheet';
 // We only need the Menu icon from lucide-react now
 import { Menu } from 'lucide-react';
 
@@ -60,6 +66,10 @@ export function Navbar({ propertyAddress }: NavbarProps) {
 						</SheetTrigger>
 						{/* The SheetContent is the same for both mobile and desktop triggers */}
 						<SheetContent side="left" className="w-full sm:w-[320px]">
+							<SheetHeader>
+								<SheetTitle className="text-lg font-semibold"></SheetTitle>
+							</SheetHeader>
+							{propertyAddress}
 							<div className="flex flex-col h-full p-6">
 								<div className="mb-12">
 									{/* You can put a logo or title here */}
@@ -105,7 +115,9 @@ export function Navbar({ propertyAddress }: NavbarProps) {
 						href="/"
 						className={`${navTextColor} text-lg font-light uppercase tracking-widest transition-colors hover:text-primary`}
 					>
-						<span className="hidden sm:inline">The Seacliff Estate</span>
+						<span className="hidden sm:inline text-normal">
+							840 Seacliff Drive
+						</span>
 						<span className="sm:hidden">{propertyAddress}</span>
 					</Link>
 				</div>

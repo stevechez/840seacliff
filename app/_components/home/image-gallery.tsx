@@ -41,10 +41,10 @@ export function ImageGallery() {
 		<section id="gallery" className="py-4 sm:py-8">
 			<div className="container mx-auto px-4">
 				<div className="text-center mb-12">
-					<h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-						Step Inside Your Coastal Dream
+					<h2 className="text-4xl font-bold tracking-tight sm:text-4xl">
+						Step Inside This Coastal Dream Home
 					</h2>
-					<p className="mt-4 text-lg text-muted-foreground">
+					<p className="mt-4 text-xl text-muted-foreground">
 						Every room, every detail – see yourself at home in Seacliff.{' '}
 					</p>
 				</div>

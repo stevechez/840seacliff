@@ -6,8 +6,8 @@ import { ImageGallery } from '@/app/_components/home/image-gallery';
 import { PropertyDetails } from '@/app/_components/home/property-details';
 import { CtaSection } from '@/app/_components/home/cta-section';
 import { Footer } from '@/app/_components/global/footer';
+import { Separator } from '@radix-ui/react-separator';
 
-// Data for the property - In a real app, this might come from a CMS or a JSON file
 const propertyData = {
 	address: '840 Sealiff Drive, Aptos, CA 95003',
 	price: '$1,499,000',
@@ -48,12 +48,6 @@ export default function HomePage() {
 			// description={propertyData.details.description}
 			// specs={propertyData.details.specs}
 			/>
-			{/* 
-        The CtaSection and Footer can also be refactored to accept agent data, 
-        or they can import the data directly if they are very specific.
-        For simplicity, we'll assume they handle their own data for now, 
-        but passing props is the more reusable pattern.
-      */}
 			<CtaSection />
 			<Footer />
 		</main>

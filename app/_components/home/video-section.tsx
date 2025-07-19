@@ -17,10 +17,7 @@ export function VideoSection() {
 			<section className="py-8 sm:py-12 bg-secondary/50">
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-12">
-						<h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-							Beyond The Photos
-						</h2>
-						<p className="mt-4 text-lg text-muted-foreground">
+						<p className="mt-4 text-2xl text-muted-foreground">
 							The Seacliff Retreat in Motion.
 						</p>
 					</div>

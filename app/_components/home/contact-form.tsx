@@ -76,10 +76,7 @@ export function ContactForm() {
 				)}
 			</div>
 			<div>
-				<Input
-					placeholder="Phone Number (Optional)"
-					{...form.register('phone')}
-				/>
+				<Input placeholder="Phone Number" {...form.register('phone')} />
 			</div>
 			<div>
 				<Textarea placeholder="Your Message" {...form.register('message')} />
