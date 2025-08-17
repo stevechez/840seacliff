@@ -10,7 +10,7 @@ import { Separator } from '@radix-ui/react-separator';
 
 const propertyData = {
 	address: '840 Sealiff Drive, Aptos, CA 95003',
-	price: '$1,499,000',
+	price: '$1,449,000',
 	bedrooms: 3,
 	bathrooms: 3,
 	sqft: '2144',

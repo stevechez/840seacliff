@@ -24,7 +24,7 @@ export function VideoSection() {
 
 					{/* The Video Facade */}
 					<div
-						className="relative rounded-lg overflow-hidden cursor-pointer group"
+						className="flex justify-center items-center relative group cursor-pointer"
 						onClick={() => setIsModalOpen(true)}
 					>
 						{/* High-quality thumbnail image */}

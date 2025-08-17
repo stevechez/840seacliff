@@ -129,7 +129,7 @@ export function Hero({
 						<Button
 							size="lg"
 							asChild
-							className=" text-white hover:bg-blue-700 font-semibold text-xl"
+							className=" text-white hover:bg-blue-300 font-semibold text-xl"
 						>
 							<a href="#contact">Inquire Now</a>
 						</Button>
