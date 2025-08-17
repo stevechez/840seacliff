@@ -14,7 +14,7 @@ const features = [
 	},
 	{
 		icon: <Square className="h-8 w-8 text-primary" />,
-		title: '2,241 Sq. Ft.',
+		title: '2,144 Sq. Ft.',
 		description: 'Expansive open-plan living spaces.',
 	},
 	{

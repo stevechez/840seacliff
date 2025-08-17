@@ -3,10 +3,10 @@ import { BedDouble, Bath, Square, ChefHat } from 'lucide-react';
 export const propertyData = {
 	// --- Basic Info ---
 	address: '840 Seacliff Drive, Aptos, CA 95003',
-	price: '$1,499,000',
+	price: '$1,449,000',
 	bedrooms: 3,
-	bathrooms: 3,
-	sqft: 2241,
+	bathrooms: 2.5,
+	sqft: 2144,
 
 	// --- Hero Section ---
 	hero: {
@@ -26,7 +26,7 @@ export const propertyData = {
 		},
 		{
 			icon: Square,
-			title: '2,241 Sq. Ft.',
+			title: '2,155 Sq. Ft.',
 			description: 'Expansive open-plan living.',
 		},
 		{
@@ -57,13 +57,10 @@ export const propertyData = {
 			"Nestled in the prestigious hills of Beverly, this newly constructed modern estate is a symphony of glass, stone, and wood. Designed for seamless indoor-outdoor living, every room offers panoramic views of the city and canyon. The grand entrance opens to a soaring 20-foot ceiling, leading to an expansive great room with a linear fireplace and automated Fleetwood glass doors that disappear, revealing an entertainer's paradise.",
 		specs: [
 			{ label: 'Year Built', value: '2023' },
-			{ label: 'Lot Size', value: '0.75 Acres' },
+			{ label: 'Lot Size', value: '8,900 sqft' },
 			{ label: 'Architectural Style', value: 'Contemporary Modern' },
-			{ label: 'HOA Fees', value: '$250/month' },
-			{ label: 'Parking', value: '3-Car Climate-Controlled Garage' },
-			{ label: 'Cooling', value: 'Central, Multi-Zone' },
-			{ label: 'Heating', value: 'Radiant Floor Heating' },
-			{ label: 'Exterior Material', value: 'Stucco, Stone, Ipe Wood Siding' },
+			{ label: 'Parking', value: '2 Car Garage' },
+			{ label: 'Heating', value: 'Central Heating' },
 		],
 	},
 

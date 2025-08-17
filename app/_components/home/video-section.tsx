@@ -17,7 +17,7 @@ export function VideoSection() {
 			<section className="py-8 sm:py-12 bg-secondary/50">
 				<div className="container mx-auto px-4">
 					<div className="text-center mb-12">
-						<p className="mt-4 text-2xl text-muted-foreground">
+						<p className="mt-4 text-4xl text-muted-foreground font-semibold">
 							The Seacliff Retreat in Motion.
 						</p>
 					</div>
@@ -31,9 +31,9 @@ export function VideoSection() {
 						<Image
 							src="/images/840-thumbnail.jpg"
 							alt="Cinematic tour of the property"
-							width={1020}
-							height={580}
-							className="w-full h-auto"
+							width={100}
+							height={100}
+							className="w-72 h-auto"
 						/>
 						{/* Overlay to darken the image slightly */}
 						<div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300"></div>

@@ -126,13 +126,17 @@ export function Hero({
 						variants={itemVariants}
 						className="mt-8 flex flex-wrap gap-4"
 					>
-						<Button size="lg" asChild>
+						<Button
+							size="lg"
+							asChild
+							className=" text-white hover:bg-blue-700 font-semibold text-xl"
+						>
 							<a href="#contact">Inquire Now</a>
 						</Button>
 						<Button
 							size="lg"
 							variant="outline"
-							className="bg-transparent text-white border-white hover:bg-white hover:text-black"
+							className="bg-transparent text-white border-white hover:bg-white hover:text-black font-semibold text-xl"
 						>
 							<a href="#gallery">View Gallery</a>
 						</Button>

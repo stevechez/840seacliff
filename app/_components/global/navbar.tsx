@@ -74,7 +74,7 @@ export function Navbar({ propertyAddress }: NavbarProps) {
 								<div className="mb-12">
 									{/* You can put a logo or title here */}
 									<span className="text-xl font-semibold">
-										Coastal Living Awaits
+										840 Seacliff Drive
 									</span>
 								</div>
 								<nav className="flex flex-col gap-6">
@@ -91,7 +91,7 @@ export function Navbar({ propertyAddress }: NavbarProps) {
 											key={link.href}
 											href={link.href}
 											onClick={closeMobileMenu}
-											className="text-xl font-light uppercase tracking-widest text-foreground transition-colors hover:text-primary"
+											className="text-xl font-light uppercase tracking-widest text-foreground transition-colors hover:text-primary sm:hidden md:hidden"
 										>
 											{link.label}
 										</Link>
