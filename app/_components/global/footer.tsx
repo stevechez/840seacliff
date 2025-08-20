@@ -21,7 +21,7 @@ export function Footer() {
 					</div>
 
 					{/* RIGHT SIDE: Social Media */}
-					<div className="text-center md:text-right mt-16 md:mt-0">
+					{/* <div className="text-center md:text-right mt-16 md:mt-0">
 						<h4 className="font-semibold mb-2">Follow Us</h4>
 						<div className="flex justify-center md:justify-end gap-2">
 							<Button variant="ghost" size="icon" asChild>
@@ -45,13 +45,13 @@ export function Footer() {
 								</a>
 							</Button>
 						</div>
-					</div>
+					</div> */}
 				</div>
 
 				{/* Separator and Copyright remain the same */}
 				<Separator className="my-8" />
 				<div className="text-center text-sm text-muted-foreground">
-					<p>© {currentYear} Chez Realty. All Rights Reserved.</p>
+					<p>© {currentYear} All Rights Reserved.</p>
 				</div>
 			</div>
 		</footer>

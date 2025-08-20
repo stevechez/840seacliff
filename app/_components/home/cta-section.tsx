@@ -23,7 +23,7 @@ export function CtaSection() {
 							Don&quot;t miss the chance to see it for yourself. Schedule your
 							private viewing today.
 						</p>
-						<div className="flex items-center gap-4 pt-4">
+						{/* <div className="flex items-center gap-4 pt-4">
 							<Image
 								src="/images/1520716170119.jpeg"
 								alt="Steve Chez"
@@ -37,7 +37,7 @@ export function CtaSection() {
 									Listing Agent, Chez Realty
 								</p>
 							</div>
-						</div>
+						</div> */}
 					</div>
 
 					{/* Right Column: The Form */}
