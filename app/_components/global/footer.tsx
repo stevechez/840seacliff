@@ -11,14 +11,14 @@ export function Footer() {
 				{/* Main Flex Container */}
 				<div className="flex flex-col md:flex-row md:justify-between gap-10">
 					{/* LEFT SIDE: Branding and Info */}
-					<div className="text-center md:text-left">
+					{/* <div className="text-center md:text-left">
 						<h3 className="font-bold text-lg">Chez Realty</h3>
 						<p className="mt-2 text-sm text-muted-foreground max-w-md">
 							Ready to explore your potential new home? We invite you to
 							schedule a private and personalized viewing at your convenience.
 						</p>
 						<p className="text-sm text-muted-foreground mt-4">DRE #01234567</p>
-					</div>
+					</div> */}
 
 					{/* RIGHT SIDE: Social Media */}
 					{/* <div className="text-center md:text-right mt-16 md:mt-0">
