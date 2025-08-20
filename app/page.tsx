@@ -33,7 +33,7 @@ export default function HomePage() {
 	return (
 		<main className="bg-background text-foreground">
 			{/* Each component receives the data it needs from our central object */}
-			<Navbar propertyAddress={propertyData.address} />
+			{/* <Navbar propertyAddress={propertyData.address} /> */}
 			<Hero
 				// The Hero component now accepts ONE prop for the image, called 'imageSrc'.
 				imageSrc={propertyData.fallbackImageSrc}
